@@ -23,6 +23,28 @@
 @import "../../node_modules/bootstrap/scss/grid";
 @import "../../node_modules/bootstrap/scss/helpers";
 
+$legogreen: #00af4d;
+$legoblack: #000;
+$legoyellow: #FED700;
+$legored: #DA291C;
+$legoblue: #006DB7;
+
 body {
-    background-color: yellow;
+    background-color: white;
+}
+
+@mixin default-box($box-color, $max-w, $bk-color, $box-rem){
+    color: $box-color;
+    max-width: $max-w;
+    width: 100%;
+    background-color: $bk-color;
+    padding: $box-rem;
+}
+
+.product-card {
+    @include default-box($legoblack, 300px, $legoyellow, 1rem);
+    
+    .shopping-btn{
+        background-color: $legogreen;
+    }
 }
